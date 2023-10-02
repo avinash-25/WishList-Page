@@ -1,66 +1,82 @@
 /* Wishlist.css */
 
 .wishlist-container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .products-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-  
-  .product {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-    width: 250px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  .product button {
-    margin-top: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  .product button:hover {
-    background-color: #0056b3;
-  }
-  
-  .wishlist-items {
-    margin-top: 20px;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    margin: 5px;
-  }
+  text-align: center;
+  padding: 20px;
+}
+
+.products-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: 250px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Center align the content within each product container */
+}
+
+.product img {
+  max-width: 100%; /* Ensure the image doesn't exceed its container width */
+  height: auto; /* Maintain the image's aspect ratio */
+  display: block; /* Remove any extra spacing around the image */
+  margin: 0 auto 10px; /* Center the image horizontally within the product container and add some bottom margin */
+}
+
+.product h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.product p {
+  margin: 10px 0;
+}
+
+.product button {
+  background-color: #d8be56;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth hover transition */
+}
+
+.product button:hover {
+  background-color: #0056b3;
+}
+
+.wishlist-items {
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 5px;
+}
 
 .added-message {
-    margin-top: 20px;
-    background-color: #4caf50;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    animation: fadeOut 2s linear;
+  margin-top: 20px;
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  animation: fadeOut 2s linear;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
   }
-  
-  @keyframes fadeOut {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
+  100% {
+    opacity: 0;
   }
-  
+}

@@ -3,15 +3,10 @@ import './Wishlist.css';
 
 const Wishlist = ({ products }) => {
   const [wishlist, setWishlist] = useState([]);
-  const [addedToWishlist, setAddedToWishlist] = useState(false);
 
   const addToWishlist = (product) => {
     if (!wishlist.includes(product)) {
       setWishlist([...wishlist, product]);
-      setAddedToWishlist(true);
-      setTimeout(() => {
-        setAddedToWishlist(false);
-      }, 2000);
     }
   };
 
@@ -24,14 +19,10 @@ const Wishlist = ({ products }) => {
     <>
       <div className="wishlist-container">
         <h1>My Wishlist</h1>
-        {addedToWishlist && (
-          <div className="added-message">
-            <p>Added to wishlist!</p>
-          </div>
-        )}
         <div className="products-container">
           {products.map((product, index) => (
             <div className="product" key={index}>
+              <img src={product.img} alt={product.name} />
               <h3>{product.name}</h3>
               <p>{product.description}</p>
               <button onClick={() => addToWishlist(product)}>Add to Wishlist</button>
